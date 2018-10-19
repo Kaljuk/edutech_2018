@@ -14,8 +14,8 @@ class LoginScreen extends Component {
                 <View style={{flex:1}}></View>
                 <View style={styles.whiteWrapper}>
                     <Text style={styles.logoText}>EduTech</Text>
-                    <TextInput placeholder="Email" style={styles.textInput}></TextInput>
-                    <TextInput placeholder="Password" style={styles.textInput} secureTextEntry={true} ></TextInput>
+                    <TextInput placeholder="Email" style={styles.textInput} underlineColorAndroid={'transparent'}></TextInput>
+                    <TextInput placeholder="Password" style={styles.textInput} secureTextEntry={true} underlineColorAndroid={'transparent'}></TextInput>
                     <TouchableHighlight style={styles.button} onPress={() => this.props.navigation.navigate('Home')}>
                         <Text style={{color: 'white', fontWeight: '600'}}>LOG IN</Text>
                     </TouchableHighlight>
@@ -50,7 +50,8 @@ const styles = StyleSheet.create({
         fontWeight: '600'
     },
     textInput: {
-        borderBottomWidth: 0.5
+        borderBottomWidth: 0.5,
+        marginTop: 5
     },
     button: {
         backgroundColor: 'orange',

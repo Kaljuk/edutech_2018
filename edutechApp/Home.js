@@ -25,7 +25,7 @@ export default class App extends Component {
       screen: FeedScreen,
       navigationOptions: {
           tabBarIcon: ({tintColor}) => (
-              <Icon name='ios-filing' color={tintColor} size={24}></Icon>
+              <Icon name='ios-filing' color={tintColor} size={32}></Icon>
           )
       }
     },
