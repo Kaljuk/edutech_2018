@@ -59,7 +59,8 @@ const styles = StyleSheet.create({
     },
     personalInformation: {
         alignItems: 'center',
-        paddingBottom: 10
+        paddingBottom: 10,
+        borderWidth: 2
     },
     personName: {
         fontSize: 24,
@@ -67,6 +68,7 @@ const styles = StyleSheet.create({
     },
     personBio: {
         marginTop: 5,
+        width: "80%",
         borderBottomWidth: 1,
         borderTopWidth: 1,
         borderColor: '#cfcfcf',
