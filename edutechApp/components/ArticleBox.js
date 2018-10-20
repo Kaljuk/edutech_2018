@@ -7,6 +7,7 @@ import {
     Alert,
     Image
 } from "react-native";
+import { LinearGradient } from 'expo';
 
 class EventBox extends Component {
     _onPress() {
@@ -16,6 +17,7 @@ class EventBox extends Component {
         return (
             <TouchableWithoutFeedback onPress={this._onPress}>
                 <View style={styles.EventBox}>
+                    
                     <View style={styles.imageContainer}>
                         <Image 
                             resizeMode={"cover"}
@@ -24,7 +26,7 @@ class EventBox extends Component {
                         />
                         <Text style={styles.title}>{this.props.title}</Text>
                     </View>
-                    
+                    <View style={styles.hashtag}><Text style={styles.hashtagText}>#education</Text></View>
                 </View>
             </TouchableWithoutFeedback>
         );
@@ -62,5 +64,19 @@ const styles = StyleSheet.create({
         bottom: 0,
         paddingHorizontal: 15,
         paddingVertical: 10
+    },
+    hashtag: {
+        position: "absolute",
+        right: 0,
+        backgroundColor: 'rgba(0, 0, 0, 0.9)',
+        paddingHorizontal: 11,
+        paddingVertical: 5,
+        borderBottomLeftRadius: 10
+    },
+    hashtagText: {
+        color: 'white',
+        fontWeight: '900',
+        fontFamily: 'notoserif',
+        fontSize: 14
     }
 });
