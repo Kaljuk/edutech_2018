@@ -5,39 +5,29 @@ import {
     StyleSheet,
     TouchableOpacity,
     Image,
-    ListView
+    ScrollView
 } from "react-native";
 import Header from '../../Header';
+import MyTask from '../../MyTask';
 
 class HomeTask extends Component {
-    constructor() {
-        super();
-        const ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
-        this.state = {
-            dataSource: ds.cloneWithRows(['Calculus', 'Geometry', 'Design', 'Photography']),
-        };
-    }
     render() {
         return (
-            <View>
+            <ScrollView>
                 <View>
                     <Header title="Tasks"></Header>
-                </View>
-                    <ListView 
-                        dataSource={this.state.dataSource}
-                        renderRow={(rowData) => <Text>{rowData}</Text>}
-                    />
-                    <View style={{ marginLeft: 290, position:"absolute"}}>
+                    <MyTask></MyTask>
+                    <View style={{position: "absolute", marginTop: 200, marginLeft: 150}}>
                         <TouchableOpacity onPress={() => this.props.navigation.navigate('NewTask')} style={{ width: 60 }}>
                             <Image
-                                style={{ width: 45, height: 45, marginTop: 545}}
-                                source={{ uri: 'http://www.weareeclipse.com/resources/uploads/green-plus.png' }}
+                            style={{ width: 60, height: 60}}
+                                source={{ uri: 'https://vignette.wikia.nocookie.net/i-shall-seal-the-heavens/images/2/2f/Plus.png/revision/latest?cb=20180221183139' }}
                             />
                         </TouchableOpacity>
-                        <Text style={{ marginTop: 5, fontSize: 9, fontWeight: "bold" }}>Add Task</Text>
+                        <Text style={{ marginTop: 5, color: 'orange'}}>Add Task</Text>
                     </View>       
                 </View>
-            
+            </ScrollView>
             );
     }
 }

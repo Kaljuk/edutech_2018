@@ -36,7 +36,7 @@ const AppStackNavigator = createStackNavigator({
     screen: ThankYouScreen
   }
 }, {
-  initialRouteName: 'Home',//'Login',
+  initialRouteName: 'Questions',//'Login',
   headerMode: 'none'
 });
 
