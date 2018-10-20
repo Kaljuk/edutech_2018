@@ -4,10 +4,11 @@ import {
   Text,
   StyleSheet
 } from "react-native";
-import {createStackNavigator} from 'react-navigation';
+import { createStackNavigator } from 'react-navigation';
 
 import LoginScreen from './components/screens/LoginScreen';
 import HomeScreen from './Home';
+import QuestionScreen from './components/screens/QuestionScreen';
 
 export default class App extends Component {
   render() {
@@ -22,9 +23,12 @@ const AppStackNavigator = createStackNavigator({
   },
   Home: {
     screen: HomeScreen
+  },
+  Questions: {
+    screen: QuestionScreen
   }
 }, {
-  initialRouteName: 'Login',
+  initialRouteName: 'Questions',//'Login',
   headerMode: 'none'
 });
 
