@@ -54,7 +54,7 @@ export default class App extends Component {
         }
     }
   }, {
-    initialRouteName: 'Groups',
+    initialRouteName: 'Tasks',
     order: ['Feed', 'Groups', 'Tasks', 'Profile'],
     tabBarPosition: 'bottom',
     tabBarOptions: {
