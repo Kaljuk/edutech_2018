@@ -28,7 +28,7 @@ const AppStackNavigator = createStackNavigator({
     screen: QuestionScreen
   }
 }, {
-  initialRouteName: 'Questions',//'Login',
+  initialRouteName: 'Home',//'Login',
   headerMode: 'none'
 });
 

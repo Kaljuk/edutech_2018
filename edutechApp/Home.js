@@ -61,7 +61,7 @@ export default class App extends Component {
         activeTintColor: 'orange',
         inactiveTintColor: 'grey',
         style: {
-            backgroundColor: '#f2f2f2'
+            backgroundColor: '#ddd'
         },
         showIcon: true,
         showLabel: false,

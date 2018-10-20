@@ -5,11 +5,16 @@ import {
     StyleSheet
 } from "react-native";
 
+import Header from '../Header';
+
 class GroupsScreen extends Component {
     render() {
         return (
-            <View style={styles.container}>
-                <Text>GroupsScreen</Text>
+            <View>
+                <Header title="Groups"></Header>
+                <View style={styles.container}>
+            
+                </View>
             </View>
         );
     }

@@ -8,14 +8,14 @@ import {
     Image
 } from "react-native";
 
-class FeedBox extends Component {
+class EventBox extends Component {
     _onPress() {
         Alert.alert("Component pressed..")
     }
     render() {
         return (
             <TouchableWithoutFeedback onPress={this._onPress}>
-                <View style={styles.FeedBox}>
+                <View style={styles.EventBox}>
                     <View style={styles.imageContainer}>
                         <Image 
                             resizeMode={"cover"}
@@ -38,10 +38,10 @@ class FeedBox extends Component {
         );
     }
 }
-export default FeedBox;
+export default EventBox;
 
 const styles = StyleSheet.create({
-    FeedBox: {
+    EventBox: {
         flex: 1,
         backgroundColor: '#f2f2f2',
         borderColor: 'orange',
@@ -68,7 +68,8 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         borderWidth: 1,
         borderColor: 'orange',
-        borderRadius: 3
+        borderRadius: 3,
+        paddingHorizontal: 5
     },
     dateDayNumber: {
         fontSize: 22,
@@ -76,6 +77,7 @@ const styles = StyleSheet.create({
     },
     dateMonthName: {
         fontSize: 12,
+        paddingBottom: 5
         // color: 'orange'
     },
     titleContainer: {
