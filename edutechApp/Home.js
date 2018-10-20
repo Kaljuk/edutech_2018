@@ -9,7 +9,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 
 import FeedScreen from './components/screens/FeedScreen';
 import ProfileScreen from './components/screens/ProfileScreen';
-import StatsScreen from './components/screens/StatsScreen';
+import TasksScreen from './components/screens/TasksScreen';
 import GroupsScreen from './components/screens/GroupsScreen';
 
 export default class App extends Component {
@@ -37,11 +37,11 @@ export default class App extends Component {
             )
         }
     },
-    Stats: {
-        screen: StatsScreen,
+    Tasks: {
+        screen: TasksScreen,
         navigationOptions: {
             tabBarIcon: ({tintColor}) => (
-                <Icon name='ios-stats' color={tintColor} size={28}></Icon>
+                <Icon name='ios-browsers' color={tintColor} size={28}></Icon>
             )
         }
     },
@@ -54,14 +54,14 @@ export default class App extends Component {
         }
     }
   }, {
-    initialRouteName: 'Feed',
-    order: ['Feed', 'Groups', 'Stats', 'Profile'],
+    initialRouteName: 'Groups',
+    order: ['Feed', 'Groups', 'Tasks', 'Profile'],
     tabBarPosition: 'bottom',
     tabBarOptions: {
         activeTintColor: 'orange',
         inactiveTintColor: 'grey',
         style: {
-            backgroundColor: '#f2f2f2'
+            backgroundColor: '#ddd'
         },
         showIcon: true,
         showLabel: false,
