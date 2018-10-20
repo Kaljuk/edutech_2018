@@ -2,19 +2,19 @@ import React, { Component } from "react";
 import { 
     View,
     Text,
-    StyleSheet
+    StyleSheet,
+    FlatList
 } from "react-native";
 
 import Header from '../Header';
+import MyGroups from "../MyGroups";
 
 class GroupsScreen extends Component {
     render() {
         return (
             <View>
                 <Header title="Groups"></Header>
-                <View style={styles.container}>
-            
-                </View>
+                <MyGroups></MyGroups>
             </View>
         );
     }
@@ -22,9 +22,9 @@ class GroupsScreen extends Component {
 export default GroupsScreen;
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center'
-    }
+    item: {
+        padding: 10,
+        fontSize: 18,
+        height: 44,
+    },
 });
