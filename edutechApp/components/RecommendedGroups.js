@@ -5,7 +5,6 @@ import {
     StyleSheet,
     FlatList,
     Image,
-    ScrollView,
     TouchableHighlight
 } from "react-native";
 
@@ -18,33 +17,34 @@ class ListItem extends Component {
                         source={{uri: 'https://facebook.github.io/react-native/docs/assets/favicon.png'}}
                     />
                     <Text style={styles.item}>{this.props.value}</Text>
+                    <TouchableHighlight style={styles.joinButton}>
+                        <Text style={styles.joinButtonText}>JOIN</Text>
+                    </TouchableHighlight>
                 </View>
 
         );
     }
 }
 
-class MyGroups extends Component {
+class RecommendedGroups extends Component {
     render() {
         return (
-            <ScrollView style={{marginTop: 10}}>
+            <View style={{bottom: 0, width: "100%"}}>
                 <View style={styles.listHeader}>
-                    <Text style={styles.listHeaderTitle}>MY GROUPS</Text>
+                    <Text style={styles.listHeaderTitle}>RECOMMENDATIONS</Text>
                 </View>
                 <FlatList
                     data={[
-                        {key: 'Garage48'},
-                        {key: 'Innove'},
-                        {key: 'Artsper'},
-                        {key: 'RoboTex'},
+                        {key: 'TalTech'},
+                        {key: 'University of Tartu'},
                     ]}
                     renderItem={({item}) => <ListItem value={item.key}></ListItem>}
                 />
-            </ScrollView>
+            </View>
         );
     }
 }
-export default MyGroups;
+export default RecommendedGroups;
 
 const styles = StyleSheet.create({
     item: {
@@ -67,8 +67,20 @@ const styles = StyleSheet.create({
         paddingHorizontal: 10,
         paddingVertical: 10,
         borderBottomColor: 'white',
-        borderBottomWidth: 1,
-        borderBottomColor: '#eee',
-        marginTop: 1
+        borderBottomWidth: 0.5,
+        borderBottomColor: '#ddd'
+    },
+    joinButton: {
+        alignItems: 'center',
+        position: 'absolute',
+        right: 40,
+        top: 20,
+        backgroundColor: 'orange',
+        paddingHorizontal: 20,
+        paddingVertical: 5
+    },
+    joinButtonText: {
+        color: '#fff',
+        fontWeight: 'bold'
     }
 });

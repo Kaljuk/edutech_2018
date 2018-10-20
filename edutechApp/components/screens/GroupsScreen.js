@@ -8,13 +8,17 @@ import {
 
 import Header from '../Header';
 import MyGroups from "../MyGroups";
+import GroupSearch from "../GroupSerarch";
+import RecommendedGroups from "../RecommendedGroups";
 
 class GroupsScreen extends Component {
     render() {
         return (
-            <View>
+            <View style={{height: "100%", width: "100%"}}>
                 <Header title="Groups"></Header>
+                <GroupSearch />
                 <MyGroups></MyGroups>
+                <RecommendedGroups />
             </View>
         );
     }

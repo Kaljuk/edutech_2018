@@ -2,14 +2,19 @@ import React, { Component } from "react";
 import { 
     View,
     Text,
-    StyleSheet
+    StyleSheet,
+    TextInput
 } from "react-native";
 
 class GroupSearch extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text>GroupSearch</Text>
+                <TextInput
+                    style={styles.textInput}
+                    placeholder="Search groups.."
+                    placeholderTextColor="#777"
+                    underlineColorAndroid={'transparent'} />
             </View>
         );
     }
@@ -18,8 +23,17 @@ export default GroupSearch;
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center'
+        backgroundColor: 'white',
+        paddingHorizontal: 15,
+        paddingVertical: 10
+    },
+    textInput: {
+        height: 25,
+        backgroundColor: '#eee',
+        paddingVertical: 5,
+        paddingHorizontal: 20,
+        borderRadius: 5,
+        color: '#333'
+
     }
 });
