@@ -25,7 +25,7 @@ class ArticleBox extends Component {
                         />
                         <Text style={styles.title}>{this.props.title}</Text>
                     </View>
-                    <HashtagOverlay tag={this.props.tag} />
+                    <HashtagOverlay tag={this.props.tag} color="#fff" backgroundColor="rgba(0, 0, 0, 0.9)"/>
                 </View>
             </TouchableWithoutFeedback>
         );
