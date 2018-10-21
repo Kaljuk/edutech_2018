@@ -3,19 +3,39 @@ import {
     View,
     Text,
     StyleSheet,
-    TouchableWithoutFeedback,
+    TouchableWithoutFeedback, TouchableHighlight,
+    Linking,
     Alert,
     Image
 } from "react-native";
 
 
 class EventBox extends Component {
+    constructor(props) {
+        super(props);
+        this.goToLink = this.goToLink.bind(this);
+
+        this.link = ((this.props || {}).link || null);
+    }
+    goToLink() {
+        const url = this.link || "https://www.facebook.com/events/388931024971632/";
+        Linking.canOpenURL(url).then(supported => {
+            if (!supported) {
+                console.log('Can\'t handle url: ' + url);
+            } else {
+                return Linking.openURL(url);
+            }
+        }).catch(err => console.error('An error occurred', err));
+    }
     _onPress() {
-        Alert.alert("Component pressed..")
+        // Alert.alert("Component pressed..");
+        console.log("Bump");
+        this.goToLink();
     }
     render() {
         return (
-            <TouchableWithoutFeedback onPress={this._onPress}>
+            // <TouchableWithoutFeedback onPress={() => this._onPress}>
+            <TouchableWithoutFeedback onPress={() => this._onPress()}>
                 <View style={styles.EventBox}>
                     <View style={styles.imageContainer}>
                         <Image 
