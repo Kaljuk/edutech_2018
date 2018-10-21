@@ -215,7 +215,7 @@ const styles = StyleSheet.create({
         color: 'white',
         textAlign : 'center',
         fontWeight: 'bold',
-        fontSize: 18
+        fontSize: 24
     },
     questionCancelBox: {
         position: "absolute",
