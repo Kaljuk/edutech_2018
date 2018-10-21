@@ -41,6 +41,7 @@ class FeedScreen extends Component {
                     />
                     <EventBox
                         title={`Game Design: Art & Aesthetics`}
+                        link="https://www.facebook.com/events/133478520610364/"
                         tag="gamedev"
                         imageUrl={`https://scontent-arn2-1.xx.fbcdn.net/v/t1.0-9/21740058_499056753804625_8445565050551920290_n.jpg?_nc_cat=105&_nc_ht=scontent-arn2-1.xx&oh=8f343f3d3a0fda7c9517800596f02364&oe=5C52DB7B`}
                     />
