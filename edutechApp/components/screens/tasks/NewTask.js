@@ -24,12 +24,42 @@ class NewTask extends Component {
     this.state = {
         query: "",      
         data :
-            [
-            { key: '' },       //CONTENT
-            { key: '' },
-            { key: '' },
-            { key: '' },
-            { key: '' },
+                [
+                { key: 'Fashion Design' },       //CONTENT
+                { key: 'Learn programming basics' },
+                { key: 'Time management' },
+                { key: 'Investing' },
+                { key: 'JavaScript' },
+                { key: 'Adobe Illustrator' },
+                { key: 'How to run your own Business' },
+                { key: 'Python' },
+                { key: 'Data Learning' },
+                { key: 'Literature' },
+                { key: 'Modern Arts' },
+                { key: 'History' },
+                { key: 'WW2' },
+                { key: 'Adolf Hitler' },
+                { key: 'Inspiration' },
+                { key: 'Microsoft' },
+                { key: 'Java' },
+                { key: 'React JS' },
+                { key: 'AJAX' },
+                { key: 'Social Studies' },
+                { key: 'Confidence' },
+                { key: 'How to improve your brain activity' },
+                { key: 'How to sell' },
+                { key: 'Public speech' },
+                { key: 'How to use Google' },
+                { key: 'How to use Condom' },
+                { key: 'How to use Computer' },
+                { key: 'How to use CMD' },
+                { key: 'How to use paint' },
+                { key: 'How to use MS Word' },
+                { key: 'How to use PowePoint' },
+                { key: 'How to play chess' },
+                { key: 'Project- Make your own Slime' },
+                { key: 'How to use table' },
+                { key: 'How to use' },
  
             ]};
 }
@@ -39,9 +69,9 @@ class NewTask extends Component {
     }
 
     render() {
-        let searchtext = this.state.query;
+        let searchtext = this.state.query.toLowerCase();
         let filteredData = this.state.data.filter((e)=>{
-            return(e.key.includes(searchtext))
+            return(e.key.toLowerCase().includes(searchtext))
         });
         console.log("aa",filteredData);
         return (
