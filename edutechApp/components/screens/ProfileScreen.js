@@ -38,7 +38,8 @@ class ProfileScreen extends Component {
                     <TouchableHighlight style={{width:100, height:100}} onPress={()=> this.setQuizTimer()}>
                         <Image
                             style={{ width: 100, height: 100 }}
-                            source={{ uri: 'https://facebook.github.io/react-native/docs/assets/favicon.png' }}
+                            // source={{ uri: 'https://facebook.github.io/react-native/docs/assets/favicon.png' }}
+                            source={{ uri: 'https://previews.123rf.com/images/iconmama/iconmama1512/iconmama151200166/49892484-person-symbol-human-avatar-.jpg' }}
                             />
                     </TouchableHighlight>
                     </View>
