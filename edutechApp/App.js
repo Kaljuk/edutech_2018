@@ -31,7 +31,7 @@ export default class App extends Component {
     log("Timeout set");
     setTimeout( () => {
       log("Calling someEvent");
-      this.someEvent()
+      //this.someEvent()
     }, 1000); 
   }
 
@@ -49,6 +49,7 @@ export default class App extends Component {
       })
     );
   }
+
 
   render() {
     return (

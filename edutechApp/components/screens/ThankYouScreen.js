@@ -30,8 +30,8 @@ export default class ThankYouScreen extends Component {
         const feedBackMessages = [ 
             "Thank you for the feedback.",
             //"We're sad to hear that, but hopeful that you will find something more interesting",
-            "We're happy to hear that",
-            "Wonderful"
+            "We're happy to hear that!",
+            "Wonderful!"
         ]
 
         const cancelText = "Talk to you later";
