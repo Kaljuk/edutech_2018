@@ -5,22 +5,25 @@ import {
     StyleSheet,
     FlatList,
     Image,
-    TouchableHighlight
+    TouchableHighlight,
+    ScrollView
 } from "react-native";
 
 class ListItem extends Component {
     render() {
         return (
-                <View style={styles.listRow}>
-                    <Image
-                        style={{ width: 50, height: 50 }}
-                        source={{uri: 'https://facebook.github.io/react-native/docs/assets/favicon.png'}}
-                    />
-                    <Text style={styles.item}>{this.props.value}</Text>
-                    <TouchableHighlight style={styles.joinButton}>
-                        <Text style={styles.joinButtonText}>JOIN</Text>
-                    </TouchableHighlight>
-                </View>
+            <ScrollView>
+                    <View style={styles.listRow}>
+                        <Image
+                            style={{ width: 45, height: 45}}
+                            source={{uri: this.props.picUri}}
+                        />
+                        <Text style={styles.item}>{this.props.value}</Text>
+                        <TouchableHighlight style={styles.joinButton}>
+                            <Text style={styles.joinButtonText}>JOIN</Text>
+                        </TouchableHighlight>
+                    </View>
+            </ScrollView>
 
         );
     }
@@ -35,10 +38,10 @@ class RecommendedGroups extends Component {
                 </View>
                 <FlatList
                     data={[
-                        {key: 'TalTech'},
-                        {key: 'University of Tartu'},
+                        { key: 'TalTech', picUri: 'https://lh3.googleusercontent.com/bkYP_nijjwf2V1_iLnezWepkZQvKPQJI8_-OGkYZ5wCtBbBVfHzJI5UoZcTXSKEiPMw=s180-rw'},
+                        { key: 'Tallinn University', picUri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGVtH1y-YEkPf_BXR9-2cnqLpKwIZY6zXVHVJia-QhOa1pgiQ4'}
                     ]}
-                    renderItem={({item}) => <ListItem value={item.key}></ListItem>}
+                    renderItem={({item}) => <ListItem value={item.key} picUri={item.picUri} ></ListItem>}
                 />
             </View>
         );
@@ -75,7 +78,7 @@ const styles = StyleSheet.create({
     joinButton: {
         alignItems: 'center',
         position: 'absolute',
-        right: 40,
+        right: '7%',
         top: 20,
         backgroundColor: 'orange',
         paddingHorizontal: 20,

@@ -18,6 +18,7 @@ const styles = StyleSheet.create({
     hashtag: {
         position: "absolute",
         right: 0,
+        top: 0,
         backgroundColor: 'rgba(0, 0, 0, 0.9)',
         paddingHorizontal: 11,
         paddingVertical: 5,
