@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
     joinButton: {
         alignItems: 'center',
         position: 'absolute',
-        right: 30,
+        right: 40,
         top: 20,
         backgroundColor: 'orange',
         paddingHorizontal: 20,

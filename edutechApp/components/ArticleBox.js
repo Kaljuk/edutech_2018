@@ -17,7 +17,6 @@ class ArticleBox extends Component {
         return (
             <TouchableWithoutFeedback onPress={this._onPress}>
                 <View style={styles.EventBox}>
-                    
                     <View style={styles.imageContainer}>
                         <Image 
                             resizeMode={"cover"}

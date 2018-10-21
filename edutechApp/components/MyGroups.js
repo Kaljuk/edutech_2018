@@ -31,7 +31,7 @@ class MyGroups extends Component {
                 <View style={styles.listHeader}>
                     <Text style={styles.listHeaderTitle}>MY GROUPS</Text>
                 </View>
-                <FlatList
+                <FlatList   
                     data={[
                         {key: 'Garage48'},
                         {key: 'Innove'},
