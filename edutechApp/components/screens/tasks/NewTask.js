@@ -3,12 +3,9 @@ import {
     FlatList,
     View,
     Text,
-    TouchableOpacity,
     StyleSheet,
+    TextInput
 } from "react-native";
-import { SearchBar } from 'react-native-elements';
-
-
 
 class ListItem extends Component {
     render() {
@@ -25,14 +22,29 @@ class NewTask extends Component {
     super(props);
 
     this.state = {
-        query: "",
+        query: "",      
         data :
             [
-            { key: 'dd' },
-            { key: 'ss' },
-            { key: 'aa' },
-            { key: 'dsa' },
-            { key: 'asd' },
+            { key: 'MATH' },       //CONTENT
+            { key: 'ART' },
+            { key: 'CALCULUS' },
+            { key: 'PHOTOGRAPHY' },
+            { key: 'CHEMICS' },
+            { key: 'MATH' },       //CONTENT
+            { key: 'ART' },
+            { key: 'CALCULUS' },
+            { key: 'PHOTOGRAPHY' },
+            { key: 'CHEMICS' },
+            { key: 'MATH' },       //CONTENT
+            { key: 'ART' },
+            { key: 'CALCULUS' },
+            { key: 'PHOTOGRAPHY' },
+            { key: 'CHEMICS' },
+            { key: 'MATH' },       //CONTENT
+            { key: 'ART' },
+            { key: 'CALCULUS' },
+            { key: 'PHOTOGRAPHY' },
+            { key: 'CHEMICS' },
             ]};
 }
     handleSearch = (text) => {
@@ -48,10 +60,14 @@ class NewTask extends Component {
         console.log("aa",filteredData);
         return (
             <View>
-                <SearchBar placeholder="Type Here" onChangeText={this.handleSearch}/>
+                <TextInput
+                    style={styles.textInput}
+                    placeholder="Search for tasks..."
+                    placeholderTextColor="#777"
+                    underlineColorAndroid={'transparent'}
+                    onChangeText={this.handleSearch}
+                />
                 <FlatList data={filteredData}
-                   
-    
                     renderItem={({ item }) => <ListItem key = {item.key} value={item.key}>
                     </ListItem>}
                     keyExtractor= {item => item.key}
@@ -87,11 +103,12 @@ const styles = StyleSheet.create({
         borderBottomWidth: 1,
     },
         textInput: {
-        height: 25,
+        height: 55,
         backgroundColor: '#eee',
         paddingVertical: 5,
         paddingHorizontal: 20,
         borderRadius: 5,
-        color: '#333'
-    }
+        color: '#333',  
+        marginTop: 20,
+    },
 });
