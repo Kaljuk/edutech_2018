@@ -3,20 +3,27 @@ import {
     View,
     Text,
     StyleSheet,
-    Image
+    Image,
+    TouchableHighlight
 } from "react-native";
 
 
 class ProfileScreen extends Component {
     constructor(props) {
         super(props);
+
+        this.setQuizTimer = this.setQuizTimer.bind(this);
     }
-    componentDidMount() {
-        // setTimeout( () => {
-        //     this.props.navigation.navigate('Questions');
-        // }, 2000);
+
+    setQuizTimer() {
+        console.log("Params:",this.props.screenProps.quiz);
+        setTimeout( ()=> {
+            console.log("ToQuiz")
+            this.props.screenProps.quiz();
+        }, 5000);
     }
     render() {
+        
         return (
             <View style={styles.profileWrapper}>
                 <View style={styles.coverPhoto}>
@@ -28,10 +35,12 @@ class ProfileScreen extends Component {
                 </View>
                 <View style={styles.profilePictureContainer}>
                     <View style={{ borderWidth: 5, borderColor: '#f2f2f2', borderRadius: 5 }}>
+                    <TouchableHighlight style={{width:100, height:100}} onPress={()=> this.setQuizTimer()}>
                         <Image
                             style={{ width: 100, height: 100 }}
                             source={{ uri: 'https://facebook.github.io/react-native/docs/assets/favicon.png' }}
-                        />
+                            />
+                    </TouchableHighlight>
                     </View>
                 </View>
                 <View style={styles.personalInformation}>

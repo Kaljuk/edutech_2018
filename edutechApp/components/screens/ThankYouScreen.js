@@ -18,6 +18,7 @@ export default class ThankYouScreen extends Component {
     constructor(props) {
         super(props);
         this.nextPage = this.nextPage.bind(this);
+        log("NavParams", this.props.navigation.state.params.cancel);
     }
 
     nextPage() {
@@ -34,15 +35,15 @@ export default class ThankYouScreen extends Component {
         ]
 
         const cancelText = "Talk to you later";
-        log("Cancel:",this.props.cancel);
+
+        const isCancel = this.props.navigation.state.params.cancel;
         const thankYouText = feedBackMessages[Math.floor(Math.random() * feedBackMessages.length)]
         const next = this.nextPage;
-
-        log("Show", thankYouText);
+        
         return (
             <TouchableOpacity style={{ flex:1 }} onPress={ () => next()}>
                 <View style={ styles.infoBox }>
-                    <Text style={ styles.questionCancelText }>{ (this.props.cancel == true)? cancelText : thankYouText }</Text>
+                    <Text style={ styles.questionCancelText }>{ (isCancel && cancelText) || thankYouText }</Text>
                 </View>
             </TouchableOpacity>
         );
