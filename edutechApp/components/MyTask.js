@@ -4,7 +4,9 @@ import {
     Text,
     StyleSheet,
     FlatList,
-    ScrollView,
+    Image,
+    TouchableOpacity,
+    ScrollView
 } from "react-native";
 
 class ListItem extends Component {
@@ -20,21 +22,23 @@ class ListItem extends Component {
 
 class MyTask extends Component {
     render() {
-        state = { searchTerm: "" };
         return (
             <ScrollView>
-                <View style={{ marginTop: 100, }}>
+                <View style={{ marginTop: 350 }}>
                     <View style={styles.listHeader}>
                         <Text style={styles.listHeaderTitle}>My Tasks</Text>
                     </View>
                     <FlatList
                         data={[
-                            { key: 'Learn:    "Modern Arts in 21.st Century"'},
+                            { key: 'Learn:    "Modern Arts in 21.st Century"' },
                             { key: 'Create:   "Visualize nature in a new way!"' },
                             { key: 'Project:  "Create Alum Crystals"' },
                             { key: 'Course:   "Modern Adobe Illustrator"' },
                         ]}
                         renderItem={({ item }) => <ListItem value={item.key}>
+                            <TouchableOpacity>
+
+                            </TouchableOpacity>
                         </ListItem>}
                     />
                 </View>
@@ -45,14 +49,11 @@ class MyTask extends Component {
 }
 export default MyTask;
 
-
-
 const styles = StyleSheet.create({
     item: {
         padding: 5,
         fontSize: 14,
         height: 40,
-        color: '#555',
         backgroundColor: '#f5f5f5',
     },
     listHeader: {

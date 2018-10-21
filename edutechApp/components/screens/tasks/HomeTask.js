@@ -2,27 +2,30 @@ import React, { Component } from "react";
 import {
     View,
     Text,
+    StyleSheet,
     TouchableOpacity,
+    Image,
     ScrollView
 } from "react-native";
 import Header from '../../Header';
 import MyTask from '../../MyTask';
-import Icon from 'react-native-vector-icons/Ionicons';
 
 class HomeTask extends Component {
     render() {
         return (
             <ScrollView>
-                <View >
+                <View>
                     <Header title="Tasks"></Header>
-                    <View style={{ alignItems: "center", justifyContent: "center", marginTop: 100 }}>
-                        <TouchableOpacity onPress={() => this.props.navigation.navigate('NewTask')}>
-                            <Text style={{fontSize: 68, fontWeight: '900', fontFamily: 'Roboto', color: '#444'}}>+</Text>
-                           
+                    <MyTask></MyTask>
+                    <View style={{position: "absolute", marginTop: 200, marginLeft: 150}}>
+                        <TouchableOpacity onPress={() => this.props.navigation.navigate('NewTask')} style={{ width: 60 }}>
+                            <Image
+                            style={{ width: 60, height: 60}}
+                                source={{ uri: 'https://vignette.wikia.nocookie.net/i-shall-seal-the-heavens/images/2/2f/Plus.png/revision/latest?cb=20180221183139' }}
+                            />
                         </TouchableOpacity>
-                        <Text style={{color: '#555', fontWeight: '400', marginTop: -5 }}>Add Task</Text>
+                        <Text style={{ marginTop: 5, color: 'orange'}}>Add Task</Text>
                     </View>       
-                    <MyTask></MyTask> 
                 </View>
             </ScrollView>
             );
