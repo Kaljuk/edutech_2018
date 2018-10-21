@@ -71,7 +71,7 @@ const AppStackNavigator = createStackNavigator({
     screen: ThankYouScreen
   }
 }, {
-  initialRouteName: 'Home',//'Login',
+  initialRouteName: 'Login',//' Login',
   headerMode: 'none'
 });
 

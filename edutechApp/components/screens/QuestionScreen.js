@@ -64,7 +64,7 @@ export default class QuestionScreen extends Component {
     }
  
     render() {
-        // log("thisstate:", this.state)
+        // LimeGreen, AquaBlue, Purple
         let colors = ['#81b108', '#52b7bd', '#6d2963']
         // let customStyle = { backgroundColor: colors[Math.floor(Math.random()*colors.length)] };
         let customStyle = { backgroundColor: colors[Math.min(colors.length-1, this.state.currentQuestionId)] };
@@ -77,7 +77,7 @@ export default class QuestionScreen extends Component {
         let topic = (this.state.questionnaires[questionId] || []);
 
         log(this.state.questionnaires[0])
-        let questionButtons = (topic.questions || []).map( (q, k) => {
+        let answers = (topic.answers || []).map( (q, k) => {
             return (
                 <TouchableOpacity key={k} 
                     style={[ styles.questionBox, customStyle ]}
@@ -102,11 +102,11 @@ export default class QuestionScreen extends Component {
                     <Text style={[ styles.titleText, styles.indexText ]}> 
                         {" "}{ questionId+1 || "X" }/{ this.state.questionnaires.length || "X" }{" "}
                     </Text>
-                    <Text style={ styles.titleText }>What suits you the most{"\n"}about { topic.subject }?{"\n\n"}</Text>
+                    <Text style={ styles.titleText }>{ topic.question }{"\n"}</Text>
+                    <View style={ customStyle }><Text style={ [styles.subjectText] }> { topic.subject } </Text></View>
                 </View>
-                    
 
-                { questionButtons }
+                { answers }
 
                 {/* Cancel the questions */}
                 <View style={ styles.questionCancelBox }>
@@ -124,27 +124,39 @@ export default class QuestionScreen extends Component {
 QuestionScreen.defaultProps = {
     questionnaires: [
         { 
-            subject: "Math",
-            questions: [
+            subject: "Art",
+            question: 'Have you drawn anything new lately?',
+            answers: [
                 {
-                    text: "I'm bored in class / \nI'd like to know more about this subject", 
+                    text: "Yes", 
                     productivity: -3, interest: 1
                 }, { 
-                    text: "I need help /\n I'm stuck", productivity: 1, interest: 5
-                }, { 
-                    text: "I don't like this subject", productivity: 0, interest: -5
+                    text: "No"
                 }
             ]
         }, { 
-            subject: "Programming",
-            questions: [
+            subject: "Chemistry",
+            question: 'How do you feel about chemistry?',
+            answers: [
                 {
-                    text: "I'm bored in class / \nI'd like to know more about this subject", 
+                    text: "Boring"
+                }, { 
+                    text: "Interesting,\nI do tests of my own"
+                }, { 
+                    text: "It's ok"
+                }
+            ]
+        }, { 
+            subject: "Personality",
+            question: 'Finish the line:\n"If one door closes, ..."',
+            answers: [
+                {
+                    text: "another one opens.", 
                     productivity: -3, interest: 1
                 }, { 
-                    text: "I need help /\n I'm stuck", productivity: 1, interest: 5
+                    text: "open a window.", productivity: 1, interest: 5
                 }, { 
-                    text: "I don't like this subject", productivity: 0, interest: -5
+                    text: "just wait in the hallway.", productivity: 0, interest: -5
                 }
             ]
         }
@@ -168,7 +180,7 @@ const styles = StyleSheet.create({
         right: 0,
         top: "6%",
         
-        marginBottom: "4%",
+        marginBottom: "6%",
         alignItems: 'center',
         justifyContent: 'center'
     },
@@ -178,9 +190,15 @@ const styles = StyleSheet.create({
         fontSize: 24,
         color   : 'black'
     },
+    subjectText: {
+        textAlign : 'center',
+        fontWeight: 'bold',
+        fontSize: 12, 
+        color   : 'white'
+    },
     questionBox: {
         marginTop: "5%", 
-        height: "18%",
+        height: "15%",
 
         flexDirection: 'row',
         alignItems: 'center',

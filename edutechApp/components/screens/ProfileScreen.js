@@ -20,7 +20,7 @@ class ProfileScreen extends Component {
         setTimeout( ()=> {
             console.log("ToQuiz")
             this.props.screenProps.quiz();
-        }, 5000);
+        }, 3000);
     }
     render() {
         

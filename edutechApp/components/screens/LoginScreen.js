@@ -13,7 +13,7 @@ class LoginScreen extends Component {
             <View style={styles.container}>
                 <View style={{flex:1}}></View>
                 <View style={styles.whiteWrapper}>
-                    <Text style={styles.logoText}>EduTech</Text>
+                    <Text style={styles.logoText}>fillSkill</Text>
                     <TextInput placeholder="Email" style={styles.textInput} underlineColorAndroid={'transparent'}></TextInput>
                     <TextInput placeholder="Password" style={styles.textInput} secureTextEntry={true} underlineColorAndroid={'transparent'}></TextInput>
                     <TouchableHighlight style={styles.button} onPress={() => this.props.navigation.navigate('Home')}>
