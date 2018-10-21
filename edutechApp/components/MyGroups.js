@@ -17,7 +17,6 @@ class ListItem extends Component {
                     style={{width:45, height: 45}}
                     source={{ uri: this.props.picUri}}
                     />
-
                     <Text style={styles.item}>{this.props.value}</Text>
                 </View>
 
