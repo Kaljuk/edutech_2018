@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     logoText: {
         textAlign: 'center',
         color: '#333',
-        fontSize: 48,
+        fontSize: 52,
         fontWeight: '600'
     },
     textInput: {
@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
         backgroundColor: 'orange',
         paddingHorizontal: 30,
         paddingVertical: 10,
-        marginTop: 15,
+        marginTop: 20,
         alignItems: 'center'
     },
     text: {

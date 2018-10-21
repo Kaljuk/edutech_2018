@@ -49,12 +49,14 @@ class ProfileScreen extends Component {
                         <Text style={styles.personBioText}>Hey there!{"\n"} I'm a demo profile created during the Garage48 EduTech Hackathon.</Text>
                     </View>
                 </View>
-                <View style={styles.intrestTagsContainer}>
-                        <Image 
-                            resizeMode={"cover"}
-                            style={{ width: "100%", height: 230 }}
-                            source={{uri: "https://image.ibb.co/jNYwT0/hashtags.png" }} 
-                        />
+                <View style={{alignItems: 'center'}}>
+                    <View style={styles.intrestTagsContainer}>
+                            <Image 
+                                resizeMode={"cover"}
+                                style={{ width: "100%", height: 230 }}
+                                source={{uri: "https://image.ibb.co/jNYwT0/hashtags.png" }} 
+                            />
+                    </View>
                 </View>
             </View>
         );
@@ -109,7 +111,10 @@ const styles = StyleSheet.create({
         textAlign: 'center'
     },
     intrestTagsContainer: {
-        paddingHorizontal: 40
+        alignItems: 'center',
+        justifyContent: 'center',
+        paddingHorizontal: 0,
+        width: '80%'
     },
     intrestTag: {
         color: '#777'

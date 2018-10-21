@@ -36,7 +36,7 @@ class FeedScreen extends Component {
                     />
                     <ArticleBox
                         title="Going to Paris. What Van Gogh’s arrival in Paris can teach us about timing."
-                        tag="design"
+                        tag="art"
                         imageUrl="https://cdn-images-1.medium.com/max/800/1*lZQONFo2wMaw0_isHIqHNA.jpeg"
                     />
                     <EventBox
