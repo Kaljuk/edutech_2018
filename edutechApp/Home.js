@@ -58,7 +58,7 @@ export default class App extends Component {
     order: ['Feed', 'Groups', 'Tasks', 'Profile'],
     tabBarPosition: 'bottom',
     tabBarOptions: {
-        activeTintColor: 'orange',
+        activeTintColor: '#ff8c19',
         inactiveTintColor: 'grey',
         style: {
             backgroundColor: '#ddd'

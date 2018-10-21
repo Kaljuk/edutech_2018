@@ -20,9 +20,21 @@ class MyTask extends Component {
                 <ScrollView contentContainerStyle={{padding: 20, backgroundColor: '#f2f2f2'}}>
                     <TaskBox 
                         title="Task name goes here" 
-                        prefix="PROJECT"
+                        prefix="COURSE"
                         textColor="white"
+                        backgroundColor="#ff8c19"
                         tag="design"
+                        tagColor="#fff"
+                        tagBgColor="rgb(234, 129, 23)"
+                    />
+                    <TaskBox 
+                        title="Task name goes here" 
+                        prefix="COURSE"
+                        textColor="white"
+                        backgroundColor="#333"
+                        tag="design"
+                        tagColor="#222"
+                        tagBgColor="white"
                     />
                 </ScrollView>
             </View>
