@@ -19,8 +19,8 @@ class MyTask extends Component {
                 </View>
                 <ScrollView contentContainerStyle={{padding: 20, backgroundColor: '#f2f2f2'}}>
                     <TaskBox 
-                        title="Task name goes here" 
-                        prefix="COURSE"
+                        title="Learning Adobe Illustrator" 
+                        prefix="Vector Art"
                         textColor="white"
                         backgroundColor="#ff8c19"
                         tag="design"
@@ -28,8 +28,8 @@ class MyTask extends Component {
                         tagBgColor="rgb(234, 129, 23)"
                     />
                     <TaskBox 
-                        title="Task name goes here" 
-                        prefix="COURSE"
+                        title="How to get started in Fashion Design" 
+                        prefix="Fashion"
                         textColor="white"
                         backgroundColor="#333"
                         tag="design"
