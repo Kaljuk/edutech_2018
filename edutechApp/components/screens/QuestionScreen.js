@@ -57,16 +57,20 @@ export default class QuestionScreen extends Component {
         this.setState({ currentQuestionId: this.state.currentQuestionId+1 }, () => {
             // Done changing
             if (this.state.currentQuestionId >= this.state.questionnaires.length) {
-                this.props.navigation.navigate('AfterQuestion');
+                // this.props.navigation.navigate({ routeName: 'AfterQuestion', params: { cancel: true }});
+                this.props.navigation.navigate({ routeName: 'AfterQuestion', params: { cancel: false }});
             }
         })
     }
-
+ 
     render() {
         // log("thisstate:", this.state)
-        const customStyle = { backgroundColor: '#52b7bd' };
+        let colors = ['#81b108', '#52b7bd', '#6d2963']
+        // let customStyle = { backgroundColor: colors[Math.floor(Math.random()*colors.length)] };
+        let customStyle = { backgroundColor: colors[Math.min(colors.length-1, this.state.currentQuestionId)] };
 
         let questionId = this.state.currentQuestionId;
+        // Prevent X+1/X
         if (questionId >= this.state.questionnaires.length) {
             return (<View></View>)
         }
@@ -77,7 +81,7 @@ export default class QuestionScreen extends Component {
             return (
                 <TouchableOpacity key={k} 
                     style={[ styles.questionBox, customStyle ]}
-                    onPress={ () => this.chooseAnswer() }
+                    onPress={ () => {this.chooseAnswer(); colors.pop()} }
                 >
                     <Text style={ styles.questionText }>
                         { q.text || "No Question" } 
