@@ -4,10 +4,26 @@ import {
     Text,
     StyleSheet,
     TouchableHighlight,
+    Linking,
     TextInput
 } from "react-native";
 
 class LoginScreen extends Component {
+    constructor(props) {
+        super(props);
+        this.goToLink = this.goToLink.bind(this);
+    }
+    goToLink() {
+        const url = "https://google.com";
+        Linking.canOpenURL(url).then(supported => {
+            if (!supported) {
+                console.log('Can\'t handle url: ' + url);
+            } else {
+                return Linking.openURL(url);
+            }
+        }).catch(err => console.error('An error occurred', err));
+    }
+
     render() {
         return (
             <View style={styles.container}>
@@ -22,7 +38,9 @@ class LoginScreen extends Component {
                     {/* <Text style={[styles.text]}>Forgot your password?</Text> */}
                 </View>
                 <View style={{justifyContent: 'flex-end', flex: 1}}>
+                    <TouchableHighlight onPress={() => this.goToLink()}>
                     <Text style={[styles.text, {marginBottom: 8}]}>Don't have an account? <Text style={{fontWeight: 'bold'}}>Create one</Text></Text>
+                    </TouchableHighlight>
                 </View>
                 
             </View>
