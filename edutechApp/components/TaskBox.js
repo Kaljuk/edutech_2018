@@ -10,10 +10,10 @@ import HashtagOverlay from "./HashtagOverlay";
 class TaskBox extends Component {
     render() {
         return (
-                <View style={styles.container}>
+                <View style={[styles.container, {backgroundColor: this.props.backgroundColor}]}>
                     <Text style={[styles.taskTitle, {color: this.props.textColor}]}>{`[${this.props.prefix}] ${this.props.title}`}</Text>
                     <Icon name="ios-arrow-forward" size={36} color={this.props.textColor} style={styles.icon}></Icon>
-                    <HashtagOverlay tag={this.props.tag} style={{backgroundColor: this.props.tagBgColor, color: this.props.tagColor}}/>
+                    <HashtagOverlay tag={this.props.tag} backgroundColor={ this.props.tagBgColor } color={this.props.tagColor}/>
                 </View>
         );
     }
@@ -24,7 +24,6 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         alignItems: 'center',
-        backgroundColor: 'orange',
         paddingVertical: 40,
         paddingHorizontal: 20,
         borderRadius: 5,

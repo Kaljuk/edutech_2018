@@ -17,6 +17,7 @@ class ListItem extends Component {
                     style={{width:45, height: 45}}
                     source={{ uri: this.props.picUri}}
                     />
+
                     <Text style={styles.item}>{this.props.value}</Text>
                 </View>
 
@@ -39,7 +40,7 @@ class MyGroups extends Component {
                         { key: 'Artsper', picUri: "https://scontent-arn2-1.xx.fbcdn.net/v/t1.0-9/22046598_1539887352716394_2092372097483331904_n.jpg?_nc_cat=1&_nc_ht=scontent-arn2-1.xx&oh=cd98ba1278dd1754be4c18803767f8a1&oe=5C55D76E"},
                         { key: 'Medium', picUri: "https://cdn-images-1.medium.com/max/800/1*NDlCgtLQtFSC5hDmP802eQ.png"},
                         { key: 'TEBO', picUri:'https://scontent-arn2-1.xx.fbcdn.net/v/t1.0-9/17155399_1255418957845510_1673204046561710634_n.png?_nc_cat=106&_nc_ht=scontent-arn2-1.xx&oh=9a552c76341f6d2ecd2ea84ad2ea4495&oe=5C485A1D'},
-                        { key: 'KUMU', picUri: 'https://kumu.ekm.ee/wp-content/uploads/sites/7/2014/11/kumu-logo.jpg'}
+                        { key: 'KUMU', picUri: 'https://i.imgur.com/XiHIjTN.jpg'}
                     ]}
                     renderItem={({item}) => <ListItem value={item.key} picUri={item.picUri}></ListItem>}
                 />
