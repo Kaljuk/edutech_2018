@@ -2,10 +2,8 @@ import React, { Component } from "react";
 import { 
     View,
     Text,
-    StyleSheet,
-    Image
+    StyleSheet
 } from "react-native";
-import HashTable from "../HashTable";
 
 class ProfileScreen extends Component {
     render() {
@@ -40,19 +38,8 @@ class ProfileScreen extends Component {
 export default ProfileScreen;
 
 const styles = StyleSheet.create({
-    profileWrapper: {
-        backgroundColor: '#f2f2f2', 
-        flex: 1
-    },
-    coverPhoto: {
-        position: 'absolute',
-        height: 200,
-        width: "100%",
-        backgroundColor: 'skyblue',
-        top: 24,
-        elevation: 3
-    },
-    profilePictureContainer: {
+    container: {
+        flex: 1,
         alignItems: 'center',
         marginTop: 150,
         elevation: 3
