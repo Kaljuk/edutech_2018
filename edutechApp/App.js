@@ -28,18 +28,19 @@ export default class App extends Component {
   }
 
   componentDidMount() {
-    // setTimeout( () => {
-    //   log("Calling someEvent");
-    //   this.someEvent()
-    // }, 5000); 
+    log("Timeout set");
+    setTimeout( () => {
+      log("Calling someEvent");
+      this.someEvent()
+    }, 1000); 
   }
 
   someEvent() {
     // call navigate for AppNavigator here:
     log("Some Event");
-    const routeName = 'Questions';
+    const routeName = 'Login';
     const params = {/* Questionnaire: ... */};
-    
+    // log(this._nav);
     this._nav.dispatch(
       NavigationActions.navigate({
         type: NavigationActions.NAVIGATE,
