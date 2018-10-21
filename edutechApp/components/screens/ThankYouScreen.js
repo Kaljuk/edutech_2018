@@ -28,12 +28,13 @@ export default class ThankYouScreen extends Component {
     render() {
         const feedBackMessages = [ 
             "Thank you for the feedback.",
-            "We're sad to hear that, but hopeful that you will find something more interesting",
+            //"We're sad to hear that, but hopeful that you will find something more interesting",
             "We're happy to hear that",
             "Wonderful"
         ]
 
         const cancelText = "Talk to you later";
+        log("Cancel:",this.props.cancel);
         const thankYouText = feedBackMessages[Math.floor(Math.random() * feedBackMessages.length)]
         const next = this.nextPage;
 

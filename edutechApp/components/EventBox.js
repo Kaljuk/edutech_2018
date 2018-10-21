@@ -8,6 +8,7 @@ import {
     Image
 } from "react-native";
 
+
 class EventBox extends Component {
     _onPress() {
         Alert.alert("Component pressed..")
@@ -89,5 +90,5 @@ const styles = StyleSheet.create({
         fontSize: 20,
         fontWeight: '600',
         color: '#444'
-    }
+    },
 });

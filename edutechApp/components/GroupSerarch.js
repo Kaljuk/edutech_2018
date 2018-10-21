@@ -23,16 +23,16 @@ export default GroupSearch;
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: 'white',
+        backgroundColor: '#eee',
         paddingHorizontal: 15,
         paddingVertical: 10
     },
     textInput: {
         height: 25,
-        backgroundColor: '#eee',
+        backgroundColor: 'white',
         paddingVertical: 5,
         paddingHorizontal: 20,
-        borderRadius: 5,
+        borderRadius: 2,
         color: '#333'
 
     }

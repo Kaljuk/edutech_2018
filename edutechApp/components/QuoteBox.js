@@ -9,7 +9,7 @@ import {
 } from "react-native";
 import HashtagOverlay from './HashtagOverlay';
 
-class ArticleBox extends Component {
+class QuoteBox extends Component {
     _onPress() {
         Alert.alert("Article pressed..")
     }
@@ -17,21 +17,23 @@ class ArticleBox extends Component {
         return (
             <TouchableWithoutFeedback onPress={this._onPress}>
                 <View style={styles.EventBox}>
+                    
                     <View style={styles.imageContainer}>
                         <Image 
                             resizeMode={"cover"}
-                            style={{ width: "100%", height: 230 }}
+                            style={{ width: "100%", height: 220, opacity: 0.5}}
                             source={{uri: this.props.imageUrl }} 
                         />
                         <Text style={styles.title}>{this.props.title}</Text>
+                        <Text style={styles.author}>{this.props.author}</Text>
                     </View>
-                    <HashtagOverlay tag={this.props.tag} />
+                    <HashtagOverlay tag="quote" />
                 </View>
             </TouchableWithoutFeedback>
         );
     }
 }
-export default ArticleBox;
+export default QuoteBox;
 
 const styles = StyleSheet.create({
     EventBox: {
@@ -45,23 +47,40 @@ const styles = StyleSheet.create({
     },
     imageContainer: {
         flex: 3,
-        // backgroundColor: 'skyblue',
+        backgroundColor: '#000',
         padding: 0,
-    },
-    headerContainer: {
-        flex: 1,
-        paddingHorizontal: 20,
-        paddingVertical: 15,
-        flexDirection: 'row',
-        alignItems: 'center',
     },
     title: {
         fontSize: 20,
-        fontWeight: '600',
+        fontWeight: '400',
         color: 'white',
         position: 'absolute',
-        bottom: 0,
+        bottom: "32%",
         paddingHorizontal: 15,
-        paddingVertical: 10
+        paddingVertical: 10,
+        fontStyle: 'italic'
+    },
+    author: {
+        fontSize: 16,
+        fontWeight: '200',
+        color: "white",
+        position: 'absolute',
+        bottom: "25%",
+        right: "10%",
+
+    },
+    hashtag: {
+        position: "absolute",
+        right: 0,
+        backgroundColor: 'rgba(0, 0, 0, 0.9)',
+        paddingHorizontal: 11,
+        paddingVertical: 5,
+        borderBottomLeftRadius: 10
+    },
+    hashtagText: {
+        color: 'white',
+        fontWeight: '900',
+        fontFamily: 'notoserif',
+        fontSize: 14
     }
 });

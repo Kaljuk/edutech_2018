@@ -54,8 +54,10 @@ const styles = StyleSheet.create({
         backgroundColor: '#f5f5f5'
     },
     listHeader: {
-        backgroundColor: '#eee',
+        backgroundColor: '#eaeaea',
         paddingHorizontal: 10,
+        borderBottomWidth: 1,
+        borderColor: '#e5e5e5'
     },
     listHeaderTitle: {
         fontSize: 14,
