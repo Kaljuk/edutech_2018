@@ -34,9 +34,15 @@ class FeedScreen extends Component {
                         author="- Nelson Mandela"
                         imageUrl="http://fazewp.fazemediainc.netdna-cdn.com/cms/wp-content/uploads/2015/02/2007-nelson-mandela-600x300.jpg"
                     />
+                    <ArticleBox
+                        title="Going to Paris. What Van Gogh’s arrival in Paris can teach us about timing."
+                        tag="design"
+                        imageUrl="https://cdn-images-1.medium.com/max/800/1*lZQONFo2wMaw0_isHIqHNA.jpeg"
+                    />
                     <EventBox
-                        title="Garage48 Edutech Hackathon"
-                        imageUrl="https://scontent-arn2-1.xx.fbcdn.net/v/t1.0-9/41514497_10155390449902142_5640440486658310144_o.jpg?_nc_cat=100&_nc_ht=scontent-arn2-1.xx&oh=093e8e4b2781febc46f1be5d11913afe&oe=5C5BB356"
+                        title={`Game Design: Art & Aesthetics`}
+                        tag="gamedev"
+                        imageUrl={`https://scontent-arn2-1.xx.fbcdn.net/v/t1.0-9/21740058_499056753804625_8445565050551920290_n.jpg?_nc_cat=105&_nc_ht=scontent-arn2-1.xx&oh=8f343f3d3a0fda7c9517800596f02364&oe=5C52DB7B`}
                     />
                 </ScrollView>
             </View>
