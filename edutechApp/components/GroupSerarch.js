@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
         paddingVertical: 10
     },
     textInput: {
-        height: 25,
+        height: 30,
         backgroundColor: 'white',
         paddingVertical: 5,
         paddingHorizontal: 20,

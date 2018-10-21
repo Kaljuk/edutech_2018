@@ -25,26 +25,12 @@ class NewTask extends Component {
         query: "",      
         data :
             [
-            { key: 'MATH' },       //CONTENT
-            { key: 'ART' },
-            { key: 'CALCULUS' },
-            { key: 'PHOTOGRAPHY' },
-            { key: 'CHEMICS' },
-            { key: 'MATH' },       //CONTENT
-            { key: 'ART' },
-            { key: 'CALCULUS' },
-            { key: 'PHOTOGRAPHY' },
-            { key: 'CHEMICS' },
-            { key: 'MATH' },       //CONTENT
-            { key: 'ART' },
-            { key: 'CALCULUS' },
-            { key: 'PHOTOGRAPHY' },
-            { key: 'CHEMICS' },
-            { key: 'MATH' },       //CONTENT
-            { key: 'ART' },
-            { key: 'CALCULUS' },
-            { key: 'PHOTOGRAPHY' },
-            { key: 'CHEMICS' },
+            { key: '' },       //CONTENT
+            { key: '' },
+            { key: '' },
+            { key: '' },
+            { key: '' },
+ 
             ]};
 }
     handleSearch = (text) => {
