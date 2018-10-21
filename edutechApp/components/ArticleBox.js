@@ -7,7 +7,7 @@ import {
     Alert,
     Image
 } from "react-native";
-import { LinearGradient } from 'expo';
+import HashtagOverlay from './HashtagOverlay';
 
 class ArticleBox extends Component {
     _onPress() {
@@ -26,7 +26,7 @@ class ArticleBox extends Component {
                         />
                         <Text style={styles.title}>{this.props.title}</Text>
                     </View>
-                    <View style={styles.hashtag}><Text style={styles.hashtagText}>#education</Text></View>
+                    <HashtagOverlay tag={this.props.tag} />
                 </View>
             </TouchableWithoutFeedback>
         );
@@ -64,19 +64,5 @@ const styles = StyleSheet.create({
         bottom: 0,
         paddingHorizontal: 15,
         paddingVertical: 10
-    },
-    hashtag: {
-        position: "absolute",
-        right: 0,
-        backgroundColor: 'rgba(0, 0, 0, 0.9)',
-        paddingHorizontal: 11,
-        paddingVertical: 5,
-        borderBottomLeftRadius: 10
-    },
-    hashtagText: {
-        color: 'white',
-        fontWeight: '900',
-        fontFamily: 'notoserif',
-        fontSize: 14
     }
 });

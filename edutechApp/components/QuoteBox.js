@@ -7,7 +7,7 @@ import {
     Alert,
     Image
 } from "react-native";
-import { LinearGradient } from 'expo';
+import HashtagOverlay from './HashtagOverlay';
 
 class QuoteBox extends Component {
     _onPress() {
@@ -27,7 +27,7 @@ class QuoteBox extends Component {
                         <Text style={styles.title}>{this.props.title}</Text>
                         <Text style={styles.author}>{this.props.author}</Text>
                     </View>
-                    <View style={styles.hashtag}><Text style={styles.hashtagText}>#quote</Text></View>
+                    <HashtagOverlay tag="quote" />
                 </View>
             </TouchableWithoutFeedback>
         );
