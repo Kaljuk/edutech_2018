@@ -14,7 +14,9 @@ class TaskSearch extends Component {
                     style={styles.textInput}
                     placeholder="Search tasks.."
                     placeholderTextColor="#777"
-                    underlineColorAndroid={'transparent'} />
+                    underlineColorAndroid={'transparent'}
+                    onChangeText = {this.handleSearch} 
+                    />
             </View>
         )
     }

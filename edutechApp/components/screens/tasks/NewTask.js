@@ -5,9 +5,9 @@ import {
     Text,
     TouchableOpacity,
     StyleSheet,
-    TextInput
 } from "react-native";
-import TaskSearch from '../../TaskSearch' ;
+import { SearchBar } from 'react-native-elements';
+
 
 
 class ListItem extends Component {
@@ -16,41 +16,45 @@ class ListItem extends Component {
             <View style={styles.listRow}>
                 <Text style={styles.item}>{this.props.value}</Text>
             </View>
-
         );
     }
 }
 
 class NewTask extends Component {
+    constructor(props){
+    super(props);
+
+    this.state = {
+        query: "",
+        data :
+            [
+            { key: 'dd' },
+            { key: 'ss' },
+            { key: 'aa' },
+            { key: 'dsa' },
+            { key: 'asd' },
+            ]};
+}
+    handleSearch = (text) => {
+        console.log(text)
+        this.setState({ query: text})
+    }
+
     render() {
+        let searchtext = this.state.query;
+        let filteredData = this.state.data.filter((e)=>{
+            return(e.key.includes(searchtext))
+        });
+        console.log("aa",filteredData);
         return (
             <View>
-                <TaskSearch></TaskSearch>
-                <FlatList
-                    data={[
-                        
-                        { key: '' },
-                        { key: '' },
-                        { key: '' },
-                        { key: '' },
-                        { key: '' },
-                        { key: '' },
-                        { key: '' },
-                        { key: '' },
-                        { key: '' },
-                        { key: '' },
-                        { key: '' },
-                        { key: '' },
-                        { key: '' },
-                        { key: '' },
-                        { key: '' },
-                        { key: '' },
-                    ]}
-                    renderItem={({ item }) => <ListItem value={item.key}>
-                        <TouchableOpacity>
-
-                        </TouchableOpacity>
+                <SearchBar placeholder="Type Here" onChangeText={this.handleSearch}/>
+                <FlatList data={filteredData}
+                   
+    
+                    renderItem={({ item }) => <ListItem key = {item.key} value={item.key}>
                     </ListItem>}
+                    keyExtractor= {item => item.key}
                     />
             </View>
         );
