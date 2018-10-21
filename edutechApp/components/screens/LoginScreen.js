@@ -39,12 +39,15 @@ const styles = StyleSheet.create({
         backgroundColor: "#f5f5f5"
     },
     whiteWrapper: {
+        width: "90%",
+        height: "70%",
         backgroundColor: 'white',
-        paddingHorizontal: 40,
-        paddingVertical: 40,
+        paddingHorizontal: 40,//80,
+        paddingVertical: "25%",
         elevation: 5
     },
     logoText: {
+        textAlign: 'center',
         color: '#333',
         fontSize: 48,
         fontWeight: '600'
