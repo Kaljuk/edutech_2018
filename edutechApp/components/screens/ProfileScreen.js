@@ -8,6 +8,14 @@ import {
 
 
 class ProfileScreen extends Component {
+    constructor(props) {
+        super(props);
+    }
+    componentDidMount() {
+        // setTimeout( () => {
+        //     this.props.navigation.navigate('Questions');
+        // }, 2000);
+    }
     render() {
         return (
             <View style={styles.profileWrapper}>
