@@ -54,12 +54,15 @@ const styles = StyleSheet.create({
         backgroundColor: '#f5f5f5'
     },
     listHeader: {
-        backgroundColor: '#eee',
+        backgroundColor: '#eaeaea',
         paddingHorizontal: 10,
+        borderBottomWidth: 1,
+        borderColor: '#e5e5e5'
     },
     listHeaderTitle: {
         fontSize: 14,
-        fontWeight: '400'
+        fontWeight: '400',
+        paddingLeft: 5
     },
     listRow: {
         flexDirection: 'row',

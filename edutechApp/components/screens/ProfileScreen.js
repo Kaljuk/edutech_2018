@@ -19,17 +19,17 @@ class ProfileScreen extends Component {
                         />
                 </View>
                 <View style={styles.profilePictureContainer}>
+                    <View style={{borderWidth: 5, borderColor: '#f2f2f2', borderRadius: 5}}>
                     <Image
                             style={{ width: 100, height: 100 }}
                             source={{uri: 'https://facebook.github.io/react-native/docs/assets/favicon.png'}}
                     />
+                    </View>
                 </View>
                 <View style={styles.personalInformation}>
                     <Text style={styles.personName}>Linda</Text>
                     <View style={styles.personBio}>
-                            <Text style= {styles.personBioText}>Hey there!</Text>
-                            <Text style= {styles.personBioText}>I'm a demo profile created during the</Text>
-                            <Text style= {styles.personBioText}>Garage48 EduTech Hackathon.</Text>
+                            <Text style= {styles.personBioText}>Hey there!{"\n"} I'm a demo profile created during the Garage48 EduTech Hackathon.</Text>
                     </View>
                 </View>
                 <HashTable />
@@ -60,7 +60,6 @@ const styles = StyleSheet.create({
     personalInformation: {
         alignItems: 'center',
         paddingBottom: 10,
-        borderWidth: 2
     },
     personName: {
         fontSize: 24,
@@ -83,6 +82,7 @@ const styles = StyleSheet.create({
         fontStyle: 'italic',
         color: '#666',
         fontSize: 13,
-        fontFamily: 'monospace'
+        fontFamily: 'monospace',
+        textAlign: 'center'
     }
 });
