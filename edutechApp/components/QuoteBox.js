@@ -27,7 +27,7 @@ class QuoteBox extends Component {
                         <Text style={styles.title}>{this.props.title}</Text>
                         <Text style={styles.author}>{this.props.author}</Text>
                     </View>
-                    <HashtagOverlay tag="quote" />
+                    <HashtagOverlay tag="quote" color="#fff" backgroundColor="rgba(0, 0, 0, 0.9)" />
                 </View>
             </TouchableWithoutFeedback>
         );
